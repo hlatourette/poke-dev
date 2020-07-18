@@ -1,0 +1,6 @@
+[submodule "pokefirered"]
+	path = pokefirered
+	url = git@github.com:hlatourette/pokefirered.git
+[submodule "agbcc"]
+	path = agbcc
+	url = git@github.com:hlatourette/agbcc.git
