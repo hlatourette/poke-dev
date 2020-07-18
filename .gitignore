@@ -1,2 +1,4 @@
 # Compiled ROM.
 *.gba
+# Save files.
+*.sav
