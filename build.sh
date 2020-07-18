@@ -3,7 +3,7 @@
 
 # Validate input.
 if [[ (-n $1 && $1 != "-v") || $# -gt 1 ]]; then
-    echo "Usage: ./build.sh [-v]"
+	echo "Usage: ./build.sh [-v]"
 	exit 1
 elif [[ -z $1 ]]; then
 	OUT="> /dev/null 2>&1"
