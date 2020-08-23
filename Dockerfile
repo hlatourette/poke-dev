@@ -1,9 +1,7 @@
-FROM devkitpro/devkitarm:latest as builder-agbcc
+FROM devkitpro/devkitarm:latest as builder
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpng-dev
-ENV DEVKITPRO=/opt/devkitpro
-ENV DEVKITARM=$DEVKITPRO/devkitARM
 COPY ./agbcc /usr/src/agbcc
 COPY ./pokefirered /usr/src/pokefirered
 RUN cd /usr/src/agbcc && \
