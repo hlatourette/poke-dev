@@ -20,7 +20,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # Build ROM inside container.
-eval "docker run --name pokefirered pokefirered make -j$(nproc) firered_rev1 $OUT"
+eval "docker run --name pokefirered pokefirered $OUT"
 if [[ $? -ne 0 ]]; then
 	echo "Failed to build ROM. $HELP"
 	exit 1
