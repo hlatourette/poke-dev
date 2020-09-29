@@ -13,28 +13,23 @@ git clone --recurse-submodules
 docker build -t pokefirered .
 ```
 
-2. Run container
+## Test
+1. Run container
 ```
 docker run -it --rm --name pokefirered pokefirered
 ```
 
-3. Build ROM (inside container)
-```
-make -j$(nproc) firered_rev1
-```
-
-## Test
-1. Export ROM from container
+2. Export ROM from container
 ```
 docker cp <containerId>:/file/path/within/container /host/path/target
 ```
 
-2. Change ROM permissions from root
+3. Change ROM permissions from root
 ```
 sudo chown <user> pokefirered_rev1.gba
 ```
 
-3. Run
+4. Run
 ```
 mgba pokefirered_rev1.gba
 ```
