@@ -1,0 +1,3 @@
+Save files. Pre-endgame files are ordered chronologically, via a numeric prefix. Postgame files are prefixed with "PG_".
+
+TODO: Fix remainin saves that were broken by the map edit PR (they still have the non-standard naming convention).
