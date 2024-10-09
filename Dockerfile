@@ -1,4 +1,4 @@
-FROM devkitpro/devkitarm:latest as builder
+FROM devkitpro/devkitarm:latest AS builder
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpng-dev && \
@@ -12,4 +12,4 @@ RUN cd /usr/src/agbcc && \
     sh build.sh && \
     sh install.sh ../pokefirered && \
     cd /usr/src/pokefirered && \
-    make -j$(nproc) firered_rev1
+    make -j$(nproc)
