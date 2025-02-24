@@ -6,32 +6,16 @@ git clone --recurse-submodules
 ```
 
 ## Build
-
-### Build Docker Image
-1. Build image (also builds agbcc compiler/tools)
 ```
-docker build -t pokefirered .
+docker build --target=build-export --output type=local,dest=./output .
 ```
 
 ## Test
-1. Run container
-```
-docker run -it --rm --name pokefirered pokefirered
-```
+N/A
 
-2. Export ROM from container
+## Run
 ```
-docker cp <containerId>:/file/path/within/container /host/path/target
-```
-
-3. Change ROM permissions from root
-```
-sudo chown <user> pokefirered_rev1.gba
-```
-
-4. Run
-```
-mgba pokefirered_rev1.gba
+<gameboyadvance/emulator> pokefirered_rev1.gba
 ```
 
 ## Resources
